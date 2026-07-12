@@ -1,64 +1,34 @@
 import React from 'react';
-import { Briefcase, GraduationCap, Award } from 'lucide-react';
+import Reveal from '../ui/Reveal';
 
-export default function Experience({ experience, education }) {
+export default function Experience() {
+  const items = [
+    { role: 'Teacher Assistant', company: 'Tafilah Technical University', duration: '1 March 2026 – 1 June 2026', buttonText: 'View Certificate', certLink: 'https://drive.google.com/file/d/16Gd24zZrLPsDxFWytTJw3xJxrMVNq4-W/view?usp=sharing' },
+    { role: 'Full Stack Developer Intern', company: 'Vertex Solutions', duration: 'June 2026 – Present', buttonText: 'View Website', certLink: 'https://www.facebook.com/profile.php?id=61584941754895' },
+  ];
+
   return (
-    <section id="experience" className="scroll-mt-24 space-y-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
-        {/* Industry Work Experience Timeline Block */}
-        <div className="space-y-8">
-          <div className="flex items-center gap-3">
-            <Briefcase className="text-[#00F5FF]" size={24} />
-            <h2 className="text-2xl font-bold text-white">Professional Experience</h2>
-          </div>
-          <div className="space-y-6 border-l-2 border-gray-800 pl-6 ml-3">
-            {experience.map((exp, idx) => (
-              <div key={idx} className="relative space-y-2">
-                {/* Timeline node icon bubble indicator */}
-                <span className={`absolute -left-[35px] top-1.5 w-4 h-4 rounded-full border-4 border-[#0B0F19] ${
-                  exp.isCurrent ? 'bg-[#00F5FF]' : 'bg-gray-700'
-                }`} />
-                <div className="flex items-start justify-between flex-wrap gap-2">
-                  <h3 className="text-lg font-bold text-white">{exp.role}</h3>
-                  <span className="text-xs font-mono text-gray-500">{exp.period}</span>
-                </div>
-                <p className="text-sm font-medium text-cyan-400">{exp.company}</p>
-                {exp.hasCertificate && (
-                  <span className="inline-block mt-1 text-[11px] font-mono px-2 py-0.5 rounded bg-green-500/10 text-green-400 border border-green-500/20">
-                    Verified Credential Secure
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
+    <section id="Experience" className="experience">
+      <div className="section-inner narrow">
+        <div className="section-heading">
+          <h2 className="section-title">Experience</h2>
         </div>
-
-        {/* Academic Profile Block */}
-        <div className="space-y-8">
-          <div className="flex items-center gap-3">
-            <GraduationCap className="text-blue-500" size={24} />
-            <h2 className="text-2xl font-bold text-white">Education & Honors</h2>
-          </div>
-          <div className="space-y-6 border-l-2 border-gray-800 pl-6 ml-3">
-            {education.map((edu, idx) => (
-              <div key={idx} className="relative space-y-2">
-                <span className="absolute -left-[35px] top-1.5 w-4 h-4 rounded-full border-4 border-[#0B0F19] bg-gray-700" />
-                <div className="flex items-start justify-between flex-wrap gap-2">
-                  <h3 className="text-lg font-bold text-white">{edu.degree}</h3>
-                  {edu.period && <span className="text-xs font-mono text-gray-500">{edu.period}</span>}
-                </div>
-                <p className="text-sm font-medium text-gray-400">{edu.institution}</p>
-                {edu.grade && (
-                  <div className="flex items-center gap-1.5 text-xs text-amber-400 font-mono mt-1">
-                    <Award size={14} /> Cumulative Rank Evaluation: {edu.grade}
-                  </div>
-                )}
+        <div className="timeline">
+          <div className="timeline-line" />
+          {items.map((item, i) => (
+            <Reveal key={item.role} delay={i * 120} className="timeline-item">
+              <span className="timeline-dot" />
+              <div className="timeline-card">
+                <h3>{item.role}</h3>
+                <p className="timeline-company">{item.company}</p>
+                <p className="timeline-duration">{item.duration}</p>
+                <a href={item.certLink} target="_blank" rel="noreferrer" className="btn-outline">
+                  {item.buttonText}
+                </a>
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
-
       </div>
     </section>
   );
