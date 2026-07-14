@@ -1,15 +1,15 @@
 export const ROLES = [
   'Intelligent Systems Engineer',
+  'Full-Stack Web Developer',
   'Machine Learning Engineer',
   'Computer Vision Developer',
-  'Full-Stack Web Developer',
 ];
 
 export const STATS = [
   { label: 'Built & Deployed', number: 8, prefix: '+', suffix: ' Projects', accent: 'cyan' },
-  { label: 'Academic Standing', text: '93.38% GPA', accent: 'amber' },
+  { label: 'Academic Standing', text: '93% GPA', accent: 'amber' },
   { label: 'Based In', text: 'Amman, Jordan', accent: 'violet' },
-  { label: 'Experience', number: 2, suffix: ' Key Roles', accent: 'cyan' },
+  { label: 'Experience', number: 4, prefix: '+', suffix: ' Months ', accent: 'cyan' },
 ];
 
 export const PROJECTS = [
