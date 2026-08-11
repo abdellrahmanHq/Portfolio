@@ -29,7 +29,7 @@ export default function Hero() {
           <Reveal delay={320}>
             <div className="hero-actions">
               <a
-                href="https://docs.google.com/uc?export=download&id=1hrvaxDOQVPAzkx7KVSDeGvQbPw_azr09"
+                href="https://drive.google.com/file/d/1zF_vUiCFvcpXbCqKvTRnYORzjStglIAK/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
