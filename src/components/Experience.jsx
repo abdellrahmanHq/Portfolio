@@ -5,6 +5,7 @@ export default function Experience() {
   const items = [
     { role: 'Teacher Assistant', company: 'Tafilah Technical University', duration: '1 March 2026 – 1 June 2026', buttonText: 'View Certificate', certLink: 'https://drive.google.com/file/d/16Gd24zZrLPsDxFWytTJw3xJxrMVNq4-W/view?usp=sharing' },
     { role: 'Full Stack Developer Intern', company: 'Vertex Solutions', duration: 'June 2026 – Present', buttonText: 'View Website', certLink: 'https://www.facebook.com/profile.php?id=61584941754895' },
+    {role:'IT & Infrastructure Technical Support intern', company:'DC Technology', duration: 'July 2026 – Present', buttonText: 'View Website', certLink: 'https://dc-technologies.net/'},
   ];
 
   return (
