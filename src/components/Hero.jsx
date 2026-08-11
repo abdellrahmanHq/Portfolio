@@ -49,7 +49,7 @@ export default function Hero() {
             <span className="bracket bracket-bl" />
             <span className="bracket bracket-br" />
             <img
-              src="/Personal-image.png"
+              src="/Personal-image2.png"
               alt="Abdellrahman AlHanaqtah"
               referrerPolicy="no-referrer"
             />
